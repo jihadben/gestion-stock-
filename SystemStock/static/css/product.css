@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 2px solid #333;
+  padding: 8px;
+  text-align: left;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#add-product {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#add-product h2 {
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.parent {
+  display: flex;
+}
+.form {
+  flex: 1; /* Take up 50% of the parent's width */
+  /* Example background color */
+  padding: 34px; /* Example padding */
+  margin: 20px;
+  position: relative;
+  width: 350px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.form h2 {
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.form h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 28px;
+  background: #4070f4;
+}
+.form form .form-control {
+  height: 50px;
+}
+
+.table {
+  flex: 1; /* Take up 50% of the parent's width */
+  /* Example background color */
+  padding: 20px; /* Example padding */
+}
+.form-control {
+  color: red;
+}

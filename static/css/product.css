@@ -1,0 +1,80 @@
+*{
+   margin :0;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 2px solid #333;
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#add-product {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#add-product h2 {
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.parent{
+    display: flex;
+}
+.form{
+    width: 400px;
+    flex: 1; /* Take up 50% of the parent's width */
+    /* Example background color */
+    padding: 20px; /* Example padding */
+}
+
+.table{
+    flex: 1; /* Take up 50% of the parent's width */
+     /* Example background color */
+    padding: 20px; /* Example padding */
+}

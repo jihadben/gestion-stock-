@@ -1,0 +1,61 @@
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/product.css' %}">
+
+
+
+<body>
+
+    <header>
+        <h1>Gestion des Produits</h1>
+    </header>
+
+<div class="parent">  
+    <div class="table">
+        <table>
+        <thead>
+            <tr>
+                <th>Nom </th>
+                <th>Description</th>
+                <th>Prix </th>
+                <th>Quantité </th>
+                <th>Activite</th>   
+            </tr>
+        </thead>
+         {% for p in pro   %}
+        <tbody>
+            <tr>
+                <td>{{p.nom_produit}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.prix_unitaire}}</td>
+                <td>{{p.quantite_en_stock}}</td>
+                <td> 
+                <a href="{% url 'edit' p.id%}"><button>edit</button> </a>
+                <a href="{% url 'delete' p.id %}"><button>Delete</button> </a> 
+                </td>
+            </tr>
+        </tbody> 
+        {% endfor  %}
+    </table>   
+            
+ 
+    </div>
+    
+        
+    <div class="form">
+        <section id="add-product">
+        <h2>Ajouter un Nouveau Produit</h2>
+        <form  method="POST">
+            <div class="input-box">
+              {% csrf_token %}
+              {{form.as_p}} <!-- c'est la formule -->
+             <button type="submit">Ajouter le Produit</button> 
+            </div>   
+        </form>
+        </section>
+    </div>   
+    
+</div>
+    
+
+</body>
+</html>

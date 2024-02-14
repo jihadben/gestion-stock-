@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/delete.css' %}">
+
+<body>
+    <div class="container">
+        <h1>Suppression de Données</h1>
+        <p>Êtes-vous sûr de vouloir supprimer ces données ?</p>
+        <form  method="POST">
+            <!-- Ajoutez des champs cachés ou des champs visibles pour identifier l'élément à supprimer -->
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Supprimer</button> 
+        </form>
+        <a href="{% url 'product'%}">Annuler</a>
+    </div>
+</body>
+</html>

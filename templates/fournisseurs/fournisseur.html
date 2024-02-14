@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/product.css' %}">
+
+
+<body>
+
+    <header>
+        <h1>Gestion des Fournisseurs</h1>
+    </header>
+
+<div class="parent">  
+    <div class="table">
+        <table>
+        <thead>
+            <tr>
+                <th>Nom </th>
+                <th>Contact</th>
+                <th>Adresse </th>
+                <th>Ville </th>
+                <th>Pays </th>
+                <th>Email </th>
+                <th>Activite</th>   
+            </tr>
+        </thead>
+         {% for f in getdata   %}
+        <tbody>
+            <tr>
+                <td>{{f.Nom_Fournisseur}}</td>
+                <td>{{f.Contact_Nom}}</td>
+                <td>{{f.Adresse}}</td>
+                <td>{{f.Ville}}</td>
+                <td>{{f.Pays}}</td>
+                <td>{{f.Email}}</td>
+                <td> 
+                <a href="{% url 'edit' f.id %}"><button>edit</button> </a>
+                <a href="{% url 'delete' f.id %}"><button>Delete</button> </a> 
+                </td>
+            </tr>
+        </tbody> 
+        {% endfor  %}
+    </table>   
+            
+ 
+    </div>
+
+    <div class="form">
+        <section id="">
+        <h2>Ajouter un Nouveau Fournisseurs</h2>
+        <form  method="POST">
+            <div class="input-box">
+              {% csrf_token %}
+              {{formule}} <!-- c'est la formule -->
+             <button type="submit">Ajouter le Produit</button> 
+            </div>   
+        </form>
+        </section>
+    </div>
